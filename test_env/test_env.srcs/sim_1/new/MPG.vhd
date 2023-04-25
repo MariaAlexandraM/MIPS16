@@ -1,6 +1,18 @@
+----------------------------------------------------------------------------------
+-- University: UTCN
+-- Student: Moldovan Maria
+-- 
+-- Date: April 2023
+-- Module Name: MPG - Behavioral
+-- Project Name: MIPS16
+-- Target Devices: Basys3
+-- 
+----------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
 
 entity MPG is
     Port ( -- in
@@ -11,7 +23,7 @@ entity MPG is
 end MPG;
 
 architecture Behavioral of MPG is
-
+-- Signals --
 signal count_int: std_logic_vector(17 downto 0) := (others => '0');
 signal Q1: std_logic := '0';
 signal Q2: std_logic := '0';

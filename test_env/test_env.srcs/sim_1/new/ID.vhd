@@ -1,10 +1,20 @@
+----------------------------------------------------------------------------------
+-- University: UTCN
+-- Student: Moldovan Maria
+-- 
+-- Date: April 2023
+-- Module Name: instructionDecoder - Behavioral
+-- Project Name: MIPS16
+-- Target Devices: Basys3
+-- 
+----------------------------------------------------------------------------------
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 
-entity ID is
+entity instructionDecoder is
     Port ( -- in
            clk: in std_logic;
            en: in std_logic;
@@ -18,9 +28,9 @@ entity ID is
            Ext_Imm: out std_logic_vector(15 downto 0); -- I-Type
            func: out std_logic_vector(2 downto 0); -- R-Type
            sa: out std_logic); -- R-Type
-end ID;
+end instructionDecoder;
 
-architecture Behavioral of ID is
+architecture Behavioral of instructionDecoder is
 -- Signals --
 type reg_array is array(0 to 7) of std_logic_vector(15 downto 0);
 signal reg_file: reg_array := (others => x"0000");
