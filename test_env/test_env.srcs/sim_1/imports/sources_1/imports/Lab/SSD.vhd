@@ -3,21 +3,23 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity SSD is
-    Port ( clk: in STD_LOGIC;
-           digits: in STD_LOGIC_VECTOR(15 downto 0);
-           an: out STD_LOGIC_VECTOR(3 downto 0);
-           cat: out STD_LOGIC_VECTOR(6 downto 0));
+    Port ( -- in
+           clk: in std_logic;
+           digits: in std_logic_vector(15 downto 0);
+           -- out
+           an: out std_logic_vector(3 downto 0);
+           cat: out std_logic_vector(6 downto 0));
 end SSD;
 
 architecture Behavioral of SSD is
-
-signal digit : STD_LOGIC_VECTOR (3 downto 0);
-signal cnt : STD_LOGIC_VECTOR (15 downto 0) := (others => '0');
-signal sel : STD_LOGIC_VECTOR(1 downto 0);
+-- Signals --
+signal digit: std_logic_vector (3 downto 0);
+signal cnt: std_logic_vector (15 downto 0) := (others => '0');
+signal sel: std_logic_vector(1 downto 0);
 
 begin
-
-    counter: process (clk) 
+    -- counter
+    process (clk) 
     begin
         if rising_edge(clk) then
             cnt <= cnt + 1;
@@ -26,7 +28,8 @@ begin
 
     sel <= cnt(15 downto 14);
 
-    muxCat : process (sel, digits)
+    -- MUX catozi
+    process (sel, digits)
     begin
         case sel is
             when "00" => digit <= digits(3 downto 0);
@@ -37,7 +40,8 @@ begin
         end case;
     end process;
 
-    muxAn : process (sel)
+    -- MUX anozi
+    process (sel)
     begin
         case sel is
             when "00" => an <= "1110";
@@ -48,7 +52,8 @@ begin
         end case;
     end process;
 
-    with digit SELect
+
+    with digit select
         cat <= "1000000" when "0000",   --0
                "1111001" when "0001",   --1
                "0100100" when "0010",   --2
