@@ -68,6 +68,7 @@ begin
                 Branch <= '1';
                 ALUOp <= "010";
             when "101" => -- ANDI
+                -- ExtOp <= '1';
                 ALUSrc <= '1';
                 RegWrite <= '1';
                 ALUOp <= "101";

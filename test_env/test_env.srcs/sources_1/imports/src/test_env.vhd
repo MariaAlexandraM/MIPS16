@@ -114,7 +114,6 @@ component MEM is
 end component;
 
 -- Signals --
-
 signal Instruction, PCinc, rd1, rd2, WD, Ext_imm: std_logic_vector(15 downto 0); 
 signal JumpAddress, BranchAddress, ALUResIn, ALUResOut, MemData: std_logic_vector(15 downto 0);
 signal func: std_logic_vector(2 downto 0);

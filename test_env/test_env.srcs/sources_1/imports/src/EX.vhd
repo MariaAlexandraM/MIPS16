@@ -94,10 +94,10 @@ begin
             when "110" => -- xor
                 ALUResAux <= RD1 xor ALUIn2;		
             when "111" => -- slt
-                if (signed(RD1) < signed(ALUIn2)) then
-                    ALUResAux <= x"0001";
-                else 
-                    ALUResAux <= x"0000";
+                if (signed(RD1) < signed(ALUIn2)) then          -- if rs < rt then 
+                    ALUResAux <= x"0001";                       --     rd = 1
+                else                                            -- else 
+                    ALUResAux <= x"0000";                       --     rd = 0
                 end if;
             when others => -- unknown
                 ALUResAux <= (others => '0');              
