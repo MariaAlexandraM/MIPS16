@@ -30,10 +30,14 @@ end instructionFetch;
 
 architecture Behavioral of instructionFetch is
 -- Signals --
-type type_rom is array (0 to 31) of std_logic_vector(15 downto 0);
-signal rom_mem: type_rom := ( -- Fibonacci.
+type type_rom is array (0 to 255) of std_logic_vector(15 downto 0);
+signal rom_mem: type_rom := ( 
+ -- Fibonacci.
                               -- calculeaza siru lu fibonacci incarcand initial 0 si 1 in reg.
                               -- scrie in mem la 2 adrese dif apoi citeste de acolo pt a verifica corectitudinea
+                             B"000_101_110_101_0_000",     -- X"1750" -- ADD $5, $5, $6
+                             B"000_101_110_101_0_001",     -- X"1751" -- SUB $5, $5, $6
+                             
                              B"001_000_001_0000000",     -- X"2080" -- ADDI $1, $0, 0
                              B"001_000_010_0000001",     -- X"2101" -- ADDI $2, $0, 1	
                              B"001_000_011_0000000",     -- X"2180" -- ADDI $3, $0, 0	
@@ -45,7 +49,7 @@ signal rom_mem: type_rom := ( -- Fibonacci.
                              B"000_001_010_101_0_000",   -- X"0550" -- ADD $5, $1, $2
                              B"000_000_010_001_0_000",   -- X"0110" -- ADD $1, $0, $2
                              B"000_000_101_010_0_000",   -- X"02A0" -- ADD $2, $0, $5
-                             B"111_0000000001000",       -- X"E008" -- J 8
+                             B"111_0000000000010",       -- X"E002" -- J 2
                              others => X"0000"); 		 -- NoOp (ADD $0, $0, $0)
 
 signal pc_Q, iesire, pcAux, iesireBranchMux: std_logic_vector(15 downto 0) := (others => '0');

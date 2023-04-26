@@ -207,7 +207,7 @@ begin
     end process;
     
     -- leds
-    led(10 downto 0) <= ALUOp & RegDst & ExtOp & ALUSrc & Branch & Jump & MemWrite & MemtoReg & RegWrite;
+    led(10 downto 0) <= RegDst & ExtOp & ALUSrc & Branch & Jump & MemWrite & MemtoReg & RegWrite & ALUOp;
     
     -- ssd display
     display: SSD port map (clk => clk, digits => digits, an => an, cat => cat);
