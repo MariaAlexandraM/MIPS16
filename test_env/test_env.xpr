@@ -6,7 +6,7 @@
 <Project Version="7" Minor="49" Path="H:/Facultate_Maria/an2_sem2/AC/MIPS16/test_env/test_env.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="81b2675b2ab74b13a014b098d0b269dc"/>
+    <Option Name="Id" Val="da2b157ae3d04e5e92868240f25c961b"/>
     <Option Name="Part" Val="xc7a35tcpg236-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -69,16 +69,81 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/src/EX.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../src/EX.vhd"/>
+          <Attr Name="ImportTime" Val="1682465193"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/ID.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../src/ID.vhd"/>
+          <Attr Name="ImportTime" Val="1682465193"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/IF.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../src/IF.vhd"/>
+          <Attr Name="ImportTime" Val="1682465193"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/MEM.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../src/MEM.vhd"/>
+          <Attr Name="ImportTime" Val="1682465193"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/MPG.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../src/MPG.vhd"/>
+          <Attr Name="ImportTime" Val="1682465193"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/MainControl.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../src/MainControl.vhd"/>
+          <Attr Name="ImportTime" Val="1682465193"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/SSD.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../src/SSD.vhd"/>
+          <Attr Name="ImportTime" Val="1682465173"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/src/test_env.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../src/test_env.vhd"/>
+          <Attr Name="ImportTime" Val="1682465193"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="test_env"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/imports/AC/Basys3_test_env.xdc">
+      <File Path="$PSRCDIR/constrs_1/imports/src/Basys3_test_env.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Basys3_test_env.xdc"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../src/Basys3_test_env.xdc"/>
           <Attr Name="ImportTime" Val="1677674253"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -89,70 +154,6 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
-      <File Path="$PSRCDIR/sim_1/imports/new/EX.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/EX.vhd"/>
-          <Attr Name="ImportTime" Val="1682465759"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/ID.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/ID.vhd"/>
-          <Attr Name="ImportTime" Val="1682465734"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/IF.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/IF.vhd"/>
-          <Attr Name="ImportTime" Val="1682465779"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/MEM.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/MEM.vhd"/>
-          <Attr Name="ImportTime" Val="1682465822"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/MPG.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/MPG.vhd"/>
-          <Attr Name="ImportTime" Val="1682465833"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/MainControl.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/MainControl.vhd"/>
-          <Attr Name="ImportTime" Val="1682465812"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/SSD.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/SSD.vhd"/>
-          <Attr Name="ImportTime" Val="1682465858"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/test_env.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/test_env.vhd"/>
-          <Attr Name="ImportTime" Val="1682465795"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="test_env"/>
@@ -194,18 +195,19 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="11">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>
@@ -220,6 +222,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
